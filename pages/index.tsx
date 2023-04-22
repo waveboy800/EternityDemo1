@@ -1,26 +1,43 @@
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import TopNavBar from './components/TopNavBar'
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <div>
       <Head>
-        <title>Create Rainbowkit App</title>
+        <title>Eternity.AI</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="">
-        <div className="flex flex-col items-center">
-          <h1 className="text-4xl font-bold text-center">
-            <span className="to-blue-500 bg-clip-text">
-              Get Started with Rainbow Kit 🌈🧰
-            </span>
-          </h1>
-          <h3 className="mt-2 text-gray-400">
-            Pre-installed NextJS (Typescript), TailwindCSS, Rainbowkit, Wagmi
-          </h3>
-          <div className="mt-4">
-            <ConnectButton />
+        <div>
+          <div
+            className="BarHome-bg"
+            style={{
+              backgroundImage: "url('/images/background.png')",
+              height: '100vh',
+              width: '100%',
+              backgroundSize: 'cover',
+            }}
+          >
+            <div >
+              <TopNavBar  />
+              {/* 其他组件 */}
+            </div>
+          </div>
+          <div
+            className="BarHome-bg"
+            style={{
+              backgroundImage: "url('/images/background.png')",
+              height: '100vh',
+              backgroundSize: 'cover',
+            }}
+          >
+            <div>
+              <TopNavBar />
+              {/* 其他组件 */}
+            </div>
           </div>
         </div>
       </main>
