@@ -2,6 +2,11 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import TopNavBar from './components/TopNavBar'
 import Banner from './components/Banner'
+import Advantage from './components/Advantage'
+import RoadMap from './components/RoadMap'
+import Partner from './components/Partner'
+import Community from './components/Community'
+import Contact from './components/Contact'
 
 const Home: NextPage = () => {
   return (
@@ -13,7 +18,7 @@ const Home: NextPage = () => {
       <main className="">
         <div>
           <div
-            className="fex items-center justify-center"
+            className=""
             style={{
               backgroundImage: "url('/images/background.png')",
               height: '100vh',
@@ -21,27 +26,19 @@ const Home: NextPage = () => {
               backgroundSize: 'cover',
             }}
           >
-            <div >
-              <TopNavBar  />
-            </div>
-            <div >
-              <Banner />
-            </div>
+            <TopNavBar />
+
+            <Banner />
           </div>
-          <div
-            className="fex items-center justify-center"
-            style={{
-              backgroundImage: "url('/images/background.png')",
-              height: '100vh',
-              width: '100%',
-              backgroundSize: 'cover',
-            }}
-          >
-            <div>
-              <TopNavBar />
-              {/* 其他组件 */}
-            </div>
-          </div>
+          <Advantage />
+
+          <RoadMap />
+
+          <Partner />
+
+          <Community />
+
+          {/* <Contact /> */}
         </div>
       </main>
     </div>
